@@ -24,9 +24,6 @@ router.get('/', async(req, res, next) => {
     if(data.length == 0) {
       throw "데이터가 없습니다."
     } 
-    for(i in data) {
-      data[i].time = data[i].time.getTime();
-    }
     res.status(200).json({
       msg : "OK",
       data: data
